@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/PWEB/SAO.html" }
+    ]
+  }
+  
