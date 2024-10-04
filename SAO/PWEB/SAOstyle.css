@@ -1,0 +1,157 @@
+.fandom-community-header {
+    color: var(--theme-community-header-color);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr min-content;
+    width: 100%
+}
+.fandom-community-header__image {
+    margin-right: 18px
+}
+@media only screen and (min-width: 1280px) {
+    .fandom-community-header__image {
+        grid-row:1/3
+    }
+}
+.fandom-community-header__image img {
+    display: block;
+    max-height: 100px;
+    max-width: 250px;
+    object-fit: scale-down;
+    object-position: bottom;
+    width: auto
+}
+@media only screen and (max-width: 1279px) {
+    .fandom-community-header__image img {
+        max-height:80px;
+        max-width: 174px
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('../AllPictures/img/saoback1.jpg'); /* URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+h1, h2 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-size: 4em;
+    margin-bottom: 5px; /* Ajusta este valor para controlar la separación */
+}
+.content {
+    background-color: rgba(128, 128, 128, 0.6); /* Gris con 60% de opacidad */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* 80% del ancho de la página */
+    height: fit-content;
+    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para efecto de profundidad */
+    flex: 1;
+}
+table {
+    width: 100%;
+    border: 1;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    font-size: 1.5em;
+}
+th {
+    background-color: #f2f2f2;
+}
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+td.cover {
+    padding: 0; /* Sin espacio entre celda y la imagen */
+    width: 100px;
+    height: 225px;
+}
+#parrafo {
+    font-size: 1.5em;
+}
+#thcover {
+    width: 15%;
+}
+#thtitle {
+    width: 45%;
+}
+#thjapan {
+    width: 20%;
+}
+#thamerica {
+    width: 20%;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    clear: both;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons .icon img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%); /* Color gris por defecto */
+    transition: all 0.3s ease; /* Transición para el hover */
+}
+
+.social-icons .icon:hover img {
+    filter: none; /* Cambia al color original al pasar el mouse */
+}
+
+p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* Logo de X - Cambia a celeste (#1DA1F2) */
+.icon:hover img[alt="Twitter"] {
+    filter: invert(56%) sepia(24%) saturate(7444%) hue-rotate(180deg) brightness(97%) contrast(94%);
+}
+
+/* Logo de GitHub - Cambia a morado (#6e5494) */
+.icon:hover img[alt="GitHub"] {
+    filter: invert(40%) sepia(19%) saturate(4929%) hue-rotate(275deg) brightness(89%) contrast(90%);
+}
+
+.icon:hover img[alt="LinkedIn"] {
+    filter: none; /* Sin cambio, mantiene color original */
+}
+.back-to-top {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #4631c0;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #4631c0;
+    color: #fff;
+    cursor: pointer;
+}

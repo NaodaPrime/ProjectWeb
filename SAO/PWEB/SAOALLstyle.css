@@ -1,0 +1,328 @@
+.fandom-community-header {
+    color: var(--theme-community-header-color);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr min-content;
+    width: 100%
+}
+.fandom-community-header__image {
+    margin-right: 18px
+}
+@media only screen and (min-width: 1280px) {
+    .fandom-community-header__image {
+        grid-row:1/3
+    }
+}
+.fandom-community-header__image img {
+    display: block;
+    max-height: 100px;
+    max-width: 250px;
+    object-fit: scale-down;
+    object-position: bottom;
+    width: auto
+}
+@media only screen and (max-width: 1279px) {
+    .fandom-community-header__image img {
+        max-height:80px;
+        max-width: 174px
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../AllPictures/img/saoback1.jpg'); /* URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+h1, h2 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 5px; /* Ajusta este valor para controlar la separación */
+}
+.content {
+    background-color: rgba(128, 128, 128, 0.6); /* Gris con 60% de opacidad */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* 80% del ancho de la página */
+    height: fit-content;
+    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para efecto de profundidad */
+}
+table {
+    width: 100%;
+    border: 1;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    font-size: 1.5em;
+}
+th {
+    background-color: #f2f2f2;
+}
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+td.cover {
+    padding: 0; /* Sin espacio entre celda y la imagen */
+    width: 100px;
+    height: 225px;
+}
+#parrafo {
+    font-size: 1.5em;
+}
+#thcover {
+    width: 15%;
+}
+#thtitle {
+    width: 45%;
+}
+#thjapan {
+    width: 20%;
+}
+#thamerica {
+    width: 20%;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* Content section */
+.content1 {
+    flex: 3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.info{
+    font-size: 20px;
+}
+.content h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    padding: 15px;
+    margin-left: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.infojap, .infoeng {
+    border: 1px solid #ccc; /* Borde gris claro */
+    margin-top: 10px; /* Espacio superior */
+    padding: 10px; /* Espacio interno */
+}
+
+.info-title {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Color del texto en blanco */
+    padding: 5px; /* Espacio interno para el título */
+    text-align: center; /* Centra el texto del título */
+    font-weight: bold; /* Hace el texto en negrita */
+}
+
+.infojap p, .infoeng p {
+    margin: 5px 0; /* Espacio entre párrafos */
+}
+.sidebar .novela-info img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.sidebar .navigation {
+    margin-top: 20px;
+}
+
+.sidebar .navigation a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.sidebar .navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+.gallery {
+    margin-top: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    align-self: center;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+/* Botones "anterior" y "siguiente" en el lightbox */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+    margin-top: -22px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Efecto hover sobre los botones */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.navigation {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    justify-content: center; /* Centra los elementos en la navegación */
+    border: 1px solid #ccc;
+}
+
+.nav-item {
+    text-align: center; /* Centra el texto dentro de cada nav-item */
+    margin: 0 15px; /* Espacio a los lados entre los elementos */
+}
+
+.nav-item a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #007bff; /* Color del enlace */
+}
+
+.nav-item span {
+    display: block; /* Hace que el texto del volumen aparezca en una nueva línea */
+    font-size: 16px; /* Tamaño de fuente del volumen */
+    color: black; /* Color del texto del volumen */
+    margin-top: 5px; /* Espacio entre el enlace y el texto del volumen */
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+}
+.social-icons {
+    margin-bottom: 10px;
+}
+.social-icons .icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+.social-icons .icon img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%); /* Color gris por defecto */
+    transition: all 0.3s ease; /* Transición para el hover */
+}
+.social-icons .icon:hover img {
+    filter: none; /* Cambia al color original al pasar el mouse */
+}
+p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* Logo de X - Cambia a celeste (#1DA1F2) */
+.icon:hover img[alt="Twitter"] {
+    filter: invert(56%) sepia(24%) saturate(7444%) hue-rotate(180deg) brightness(97%) contrast(94%);
+}
+/* Logo de GitHub - Cambia a morado (#6e5494) */
+.icon:hover img[alt="GitHub"] {
+    filter: invert(40%) sepia(19%) saturate(4929%) hue-rotate(275deg) brightness(89%) contrast(90%);
+}
+.icon:hover img[alt="LinkedIn"] {
+    filter: none; /* Sin cambio, mantiene color original */
+}
+.back-to-top {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #4631c0;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #4631c0;
+    color: #fff;
+    cursor: pointer;
+}
